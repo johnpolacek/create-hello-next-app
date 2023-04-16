@@ -26,7 +26,8 @@ export default appConfig;
   await fs.writeFile(appConfigPath, updatedConfig);
 };
 
-const initProject = async (projectName) => {
+const initProject = async (options) => {
+  const projectName = options.projectName;
   if (!projectName) {
     console.error(chalk.red("Error: Project name is required."));
     process.exit(1);
