@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-const { program } = require("commander");
-const chalk = require("chalk");
-const fs = require("fs-extra");
-const ora = require("ora");
-const execa = require("execa");
-const inquirer = require("inquirer");
+import { program } from "commander";
+import chalk from "chalk";
+import fs from "fs-extra";
+import ora from "ora";
+import execa from "execa";
+import inquirer from "inquirer";
 
 const projectNameOption = "--project-name <projectName>";
 
