@@ -1,0 +1,30 @@
+{
+  "name": "create-hello-next-app",
+  "version": "1.0.1",
+  "description": "CLI to bootstrap Hello Next App",
+  "main": "index.js",
+  "bin": {
+    "create-hello-next-app": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/johnpolacek/create-hello-next-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnpolacek/create-hello-next-app.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "John Polacek",
+    "url": "https://johnpolacek.com/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.1",
+    "fs-extra": "^11.1.1",
+    "inquirer": "^9.1.5",
+    "ora": "^6.3.0"
+  }
+}
