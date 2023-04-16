@@ -27,13 +27,20 @@ export default appConfig;
 };
 
 const initProject = async (options) => {
-  const projectName = options.projectName;
-  if (!projectName) {
-    console.error(chalk.red("Error: Project name is required."));
-    process.exit(1);
-  }
-
   const questions = [
+    {
+      type: "input",
+      name: "projectName",
+      message: "Enter the project name:",
+      default: "new-hello-next-app",
+      when: () => !projectName,
+      validate: (input) => {
+        if (input.trim() === "") {
+          return "Project name cannot be empty.";
+        }
+        return true;
+      },
+    },
     {
       type: "input",
       name: "name",
@@ -61,6 +68,7 @@ const initProject = async (options) => {
   ];
 
   const appConfig = await inquirer.prompt(questions);
+  const projectName = options.projectName || answers.projectName;
 
   const spinner = ora("Cloning the Hello Next App starter project...").start();
 
