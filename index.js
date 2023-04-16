@@ -33,7 +33,7 @@ const initProject = async (options) => {
       name: "projectName",
       message: "Enter the project name:",
       default: "new-hello-next-app",
-      when: () => !projectName,
+      when: () => !options.projectName,
       validate: (input) => {
         if (input.trim() === "") {
           return "Project name cannot be empty.";
