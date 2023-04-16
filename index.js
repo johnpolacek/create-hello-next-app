@@ -31,7 +31,7 @@ const initProject = async (options) => {
     {
       type: "input",
       name: "projectName",
-      message: "Enter the project name:",
+      message: "Enter project name. This will create a new local directory and serve as the git repository name (e.g. my-new-project):",
       default: "new-hello-next-app",
       when: () => !options.projectName,
       validate: (input) => {
@@ -44,26 +44,26 @@ const initProject = async (options) => {
     {
       type: "input",
       name: "name",
-      message: "Enter the app name:",
+      message: "Enter your app’s name:",
       default: "Hello Next App",
     },
     {
       type: "input",
       name: "description",
-      message: "Enter the app description:",
+      message: "Enter your app’s description:",
       default: "Hello Next App is a Next.js Starter Project...",
     },
     {
       type: "input",
-      name: "image",
-      message: "Enter the app image URL:",
-      default: "https://hellonext.vercel.app/screenshot.png",
+      name: "url",
+      message: "Enter the production URL where your app will be available:",
+      default: "https://hellonext.vercel.app",
     },
     {
       type: "input",
-      name: "url",
-      message: "Enter the app URL:",
-      default: "https://hellonext.vercel.app",
+      name: "image",
+      message: "Enter an image URL you plan to use for your app (usually a screenshot):",
+      default: "https://hellonext.vercel.app/screenshot.png",
     },
   ];
 
