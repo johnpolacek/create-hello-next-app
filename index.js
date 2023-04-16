@@ -68,7 +68,7 @@ const initProject = async (options) => {
   ];
 
   const appConfig = await inquirer.prompt(questions);
-  const projectName = options.projectName || answers.projectName;
+  const projectName = options.projectName || appConfig.projectName;
 
   const spinner = ora("Cloning the Hello Next App starter project...").start();
 
