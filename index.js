@@ -4,7 +4,7 @@ import { program } from "commander";
 import chalk from "chalk";
 import fs from "fs-extra";
 import ora from "ora";
-import execa from "execa";
+import { execa } from 'execa';
 import inquirer from "inquirer";
 
 const projectNameOption = "--project-name <projectName>";
