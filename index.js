@@ -16,7 +16,7 @@ const updateAppConfig = async (projectName, appConfig) => {
 const appConfig = {
   name: "${appConfig.name}",
   description: "${appConfig.description}",
-  image: "${appConfig.image}",
+  image: "${appConfig.url}/images/screenshot.jpg",
   url: "${appConfig.url}",
 };
 
@@ -58,12 +58,6 @@ const initProject = async (options) => {
       name: "url",
       message: "Enter the production URL where your app will be available:",
       default: "https://hellonext.vercel.app",
-    },
-    {
-      type: "input",
-      name: "image",
-      message: "Enter an image URL you plan to use for your app (usually a screenshot):",
-      default: "https://hellonext.vercel.app/screenshot.png",
     },
   ];
 
