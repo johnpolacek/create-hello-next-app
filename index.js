@@ -70,6 +70,8 @@ const initProject = async (options) => {
     await execa("git", ["clone", "https://github.com/johnpolacek/hello-next-app", projectName]);
     spinner.succeed("Project cloned successfully.");
 
+    await fs.remove(`${projectName}/.git`);
+
     spinner.start("Updating app.config.ts...");
     await updateAppConfig(projectName, appConfig);
     spinner.succeed("app.config.ts updated.");
